@@ -335,7 +335,7 @@ void MergeSort(vector<int> &nums, int left, int right){
 #### 算法思路：
 1. 使用双向链表list和和hash表unordered_map实现
 2. put的流程
-![](.\asset\put.jpg)
+![](./asset/put.jpg)
 ```C++
 class LRU{
 private:
