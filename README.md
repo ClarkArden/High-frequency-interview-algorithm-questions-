@@ -448,7 +448,7 @@ void reorderedList(ListNode *list){
 ```
 
 #### 算法思路：
-![算法步骤](.\asset\1.png)
+![算法步骤](.\\asset\\1.png)
 
 ```C++
 struct ListNode{
