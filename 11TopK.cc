@@ -2,10 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
-
-
 using namespace std;
-
 namespace sort_ns{
 
 bool cmp1(int a, int b){
