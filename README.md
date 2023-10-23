@@ -620,3 +620,31 @@ void customsort(){
     cout<<endl;
 }
 ```
+#### 关于priority_queue自定义排序问题
+1. 使用重载()运算符。
+2. 和sort中相反， "<"符号意味着降序，">"符号意味着升序。
+
+##### 优先权队列关于自定义排序的代码
+```C++
+struct cmp{
+    bool operator()(const pair<int, int> &a, const pair<int, int> &b){
+    
+        if(a.first == b.first) return a.second < b.second;   //降序
+        else return a.first > b.first;     // 升序
+    }
+};
+void custompq(){
+    priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> pq;
+    int count = 0;
+    while(count<5){
+        pq.push({rand()%10, rand()%10});
+        count++;
+    }
+
+    while(!pq.empty()){
+        auto k_v = pq.top();;
+        pq.pop();
+        cout<< "("<<k_v.first<<","<<k_v.second<<")"<<endl;
+    }
+}
+```
