@@ -86,10 +86,8 @@ void topK(){
 
 }
 int main(){
-
     topK();
     sort_ns::customsort();
     pq_ns::custompq();
-    return 0;
-    
+    return 0;   
 }
