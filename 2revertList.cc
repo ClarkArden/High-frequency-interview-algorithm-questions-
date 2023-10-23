@@ -15,8 +15,8 @@ ListNode* revert(ListNode *node){
     while(cur){
         nxt = cur->next;
         cur->next = prev;
-        prev = nxt;
-        nxt = cur;
+        prev = cur;
+        cur = nxt;
     }
     return prev;
 }
