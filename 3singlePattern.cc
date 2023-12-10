@@ -37,8 +37,8 @@ namespace Lazy {
         static Single* getInstance(){                       // 懒汉模式在使用的时候才创建该对象
             if(p == nullptr){
                 std::lock_guard<std::mutex> lock(m);
-                if(p == nullptr){
-                    return new Single();
+                if(p == nullptr){                           //why:会出现多个线程在等待获取当前的锁,                            
+                    return new Single();                    //当其中的一个线程释放掉锁后,又会重新new 一个对象.就会出现不同的对象
                 }
             }
             return p;
